@@ -16,7 +16,7 @@ import { MessageBarType } from 'office-ui-fabric-react/lib/MessageBar';
 export interface IState {
   isVisible: boolean;
   style: MessageBarType;
-  text: string;
+  text: string; //Need to change this to `string | React.Element` or whatever the react type is.
   link: {
     url: string;
     text: string;
