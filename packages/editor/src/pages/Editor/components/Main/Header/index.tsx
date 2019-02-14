@@ -172,11 +172,13 @@ export default connect(
   (dispatch: Dispatch) => ({
     dispatch,
     notifyClipboardCopySuccess: () =>
-      dispatch(actions.messageBar.show({ text: 'Snippet copied to clipboard.' })),
+      dispatch(actions.messageBar.show({ 
+        text: 'Snippet copied to clipboard.' //Need to change to `<span>Snippet copied to clipboard. Import it <a href="http://aka.ms/scriptlab/import">here</a></span>
+      })),
     notifyClipboardCopyFailure: () =>
       dispatch(
         actions.messageBar.show({
-          text: 'Snippet failed to copy to clipboard.',
+          text: 'Snippet failed to copy to clipboard.', 
           style: MessageBarType.error,
         }),
       ),
